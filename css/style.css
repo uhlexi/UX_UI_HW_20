@@ -1,0 +1,598 @@
+    body {
+        background-color: #000000;
+        overflow-x: hidden;
+    }
+
+    /* INTRO */
+    .intro{
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        transition: 1s;
+        align-items: center;
+    }
+
+    
+    .logo{
+        position: absolute;
+        display: block;
+        opacity: 0;
+        max-width: 20%;
+        left: 40%;
+        top: 40%;
+    }
+    
+    .logo.active{
+        bottom: 0;
+        opacity: 1;
+        transition: ease-in-out 0.5s;
+    }
+    
+    .logo.fade{
+        bottom: 0;
+        opacity: 0;
+        transition: ease-in-out 0.5s;
+    }
+
+    /* TEXT STYLES */
+@font-face {
+    font-family:'Manrope';
+    font-style: normal;
+    font-weight:400;
+    src: url(fonts/Manrope/Manrope-Regular);
+}
+
+@font-face {
+    font-family:'Manrope';
+    font-style: bold;
+    font-weight:700;
+    src: url(fonts/Manrope/Manrope-Bold);
+}
+
+@font-face {
+    font-family:'Manrope';
+    font-style: Extra-Bold;
+    font-weight:900;
+    src: url(fonts/Manrope/Manrope-ExtraBold);
+}
+
+
+    body, html {
+        margin: 0;
+        font-family: Manrope;
+        font-weight: 400;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        color:#ffffff;
+    }
+
+    .section-header {
+        font-family: Manrope;
+        font-weight: 900;
+        font-size:60px;
+        color:#ffffff;
+        text-align: right;
+        margin-right: 10%;
+    }
+
+    .regular {
+        font-size: 16px;
+        font-weight:lighter;
+        color:#ffffff;
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    .skillsheader {
+        font-size: 30px;
+        color:#ffffff;
+        text-align: center;
+    }
+
+    .caseheader {
+        font-size:30px;
+        font-weight:100;
+        color:#ffffff;
+    }
+
+    .verticaltext {
+        font-size: 40px;
+        font-weight: 100;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        position: absolute; 
+        bottom:0; 
+        left:0;
+    }
+
+/* HEADER & COMPONENTS*/
+    .background-image {
+        width: 100%;
+        height: 150%;
+        background: url('../images/Header_v3.png') no-repeat center center/cover;
+        z-index: -1;
+    }
+
+
+    .navbar {
+        display: flex;
+        justify-content: right;
+        right: 5%;
+        top: 5%;
+        align-items: center;
+        height: 60px;
+        position: absolute;
+        width: 100%;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 0 15px;
+        font-size: 20px;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+        color: #81B1E7;
+    }
+
+    .button {
+        border-radius: 4px;
+        background-color: #81B1E7;
+        border: none;
+        color: #000000;
+        text-align: center;
+        font-size: 14px;
+        padding: 5px;
+        width: 150px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        position: absolute; 
+        bottom:0; 
+        left:0;
+    }
+  
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+  
+    .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+  
+    .button:hover span {
+        padding-right: 25px;
+    }
+  
+    .button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+    
+    .subheader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #ffffff;
+        padding: 45px;
+    }
+ 
+    .subheader a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 45px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .subheader a:hover {
+        color: #81B1E7;
+    }
+
+    .subheader .divider {
+        height: 5px;
+        width: 200px;
+        border-radius: 10px;
+        background-color: #81B1E7;
+    }
+
+/* ROWS & COLUMNS */
+
+    .row1 {
+        width:90%;
+        margin:auto;
+    }
+
+    .row1:after {
+        content:"";
+        display:table;
+        clear:both;
+    }
+
+    .row2 {
+        width:90%;
+        margin:auto;
+        justify-content: center;
+        display:flex;
+    }
+
+    .row2:after {
+        content:"";
+        display:table;
+        clear:both;
+    }
+
+    .row3 {
+        width:90%;
+        margin:10%;
+        justify-content: center;
+        align-content: center;
+        display:flex;
+    }
+
+    .row3:after {
+        content:"";
+        display:table;
+        clear:both;
+    }
+
+    .aboutcolumnimg {
+        float: left;
+        width: 25%;
+        height: auto;
+    }
+
+    .aboutcolumnimg img {
+        width: 100%;
+        height: auto;
+    }
+
+    .aboutcolumntxt {
+        float: right;
+        width: 70%;
+        height: auto;
+    }
+
+    .onethirdcolumn {
+        width: 30%;
+        float:left;
+        height: auto;
+        margin: 15px;
+        justify-content: center;
+    }
+
+    
+    .onethirdcolumnimg {
+        width: 30%;
+        float:left;
+        height: 30%;
+        margin: 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .halfcolumn {
+        width: 46%;
+        float:left;
+        height:auto;
+        margin: 15px;
+    }
+
+    .halfcolumn img {
+        width: 100%;
+        height: auto;
+    }
+
+    .onefifthcolumn {
+        width: 20%;
+        float:left;
+        height: auto;
+        justify-content: center;
+    }
+
+    .casestudy {
+        width: 60%;
+        float: left;
+        height: auto;
+    }
+
+    .casestudy img {
+        width: 100%;
+        height: auto;
+        justify-content: end;
+    }
+
+    .casestudy:nth-child(1)
+    
+
+
+/* ASSETS */
+
+    hr.rounded {
+        height: 5px;
+        width: 80%;
+        border-radius: 10px;
+        background-color: #4b4b4b;
+    }
+
+    hr.invisable {
+        height: 100px;
+        width: 80%;
+        border:none;
+    }
+
+    .center {
+        text-align:center;
+        background-color: #051E39;
+        border: 1px solid #051E39;
+        border-radius: 5px;
+    }
+
+
+/* FOOTER */
+
+    .footer {
+        background-color: #051E39;
+        color: white;
+        padding: 20px 0;
+        position: static;
+        width: 100%;
+        height: auto;
+
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        line-height: 180%;
+    }
+
+    .footer-links li {
+        margin: 0;
+    }
+
+    .footer-links a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+        color: #4b4b4b;
+    }
+
+
+
+
+
+
+        .background-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image: url('../images/section.png');
+            background-size: contain; 
+            background-repeat: no-repeat;  
+            background-position: top;
+            display:flex;
+            justify-content: first-baseline;
+            align-items: center;
+            color: white;
+            text-align: center;
+            flex-direction: column;
+          
+        }
+
+        .text-row {
+            width: 80%;
+            margin-top: 75px;
+            font-size: xx-large ;
+            font-weight: 400;
+        }
+        @media screen and (max-width: 600px) {
+            .text-row {
+              font-size: 20px;
+            }
+          }
+
+
+
+ .hidden-left {
+    opacity:0;
+    filter: blur(20px);
+    transform: translateX(-100%);
+    transition: all 2s;
+ }      
+
+ .hidden-right {
+    opacity:0;
+    filter: blur(20px);
+    transform: translateX(+100%);
+    transition: all 2s;
+ }  
+
+ .hidden-y {
+    opacity:0;
+    filter: blur(40px);
+    transform: translateY(-100);
+    transition: all 2s;
+ }  
+
+
+ .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+ }
+
+ .show-y {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+ }
+
+ section {
+    display: grid;
+ }
+
+ div {
+    position: relative;
+
+}
+
+
+/* CASE STUDIES */
+
+.fit {
+    max-width: 99%;
+    max-height: 99%;
+  }
+
+  img.fit {
+    display: block;
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    margin-top: 125px;
+}
+
+.casecontent {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 50px;
+    margin-left: 24%;
+}
+
+.casebutton-container {
+    display: flex;
+    gap: 20px; 
+}
+
+.casebutton {
+    border-radius: 4px;
+    background-color: #81B1E7;
+    border: none;
+    color: #000000;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px;
+    width: 160px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.casebutton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.casebutton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.casebutton:hover span {
+    padding-right: 25px;
+}
+
+.casebutton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.casebody {
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: left;
+}
+
+.casecolumn-one {
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: left;
+    padding: 10px;
+}
+
+.caserow-one {
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: left;
+    padding: 10px;
+    display:flex;
+}
+
+.casecolumn-one-img {
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.caserow-one:after {
+    content:"";
+    display:table;
+    clear:both;
+}
+
+
+.column img {
+    position: absolute;
+    left: 50%;
+}
+
+
+.casecolumn-one .column {
+    flex: 1; 
+    margin: 0 10px; 
+}
+
+.casefill {
+    background-color: #4b4b4b;
+    padding: 1%;
+}
+
+.casehalfcolumn-old {
+    width: 10%;
+    float:left;
+    height: auto;
+    margin: 15px;
+}
+
+.casehalfcolumn {
+    width: 40%;
+    float:left;
+    height:auto;
+    margin: 15px;
+}
+
+.casehalfcolumn img {
+    width: 100%;
+    height: auto;
+}
