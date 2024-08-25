@@ -46,20 +46,3 @@ let intro = document.querySelector('.intro')
       },2300);
     })
   })
-
-
-
-  <!--CASE STUDY-->
-<script>
-    document.getElementById("fonts").addEventListener("click", function() {
-        document.getElementById("main-image").src = "images/style2.png";
-    });
-
-    document.getElementById("controls").addEventListener("click", function() {
-        document.getElementById("main-image").src = "images/style3.png";
-    });
-
-    document.getElementById("colors").addEventListener("click", function() {
-        document.getElementById("main-image").src = "images/style1.png";
-    });
-</script>

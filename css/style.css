@@ -184,7 +184,50 @@
         opacity: 1;
         right: 0;
     }
-    
+
+    /*Button 2 */
+
+    .button2 {
+        border-radius: 4px;
+        background-color: #81B1E7;
+        border: none;
+        color: #000000;
+        text-align: center;
+        font-size: 14px;
+        width: 150px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px; 
+        left:0;
+    }
+  
+    .button2 span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+  
+    .button2 span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+  
+    .button2:hover span {
+        padding-right: 25px;
+    }
+  
+    .button2:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+
+    /*Subheader*/ 
+
     .subheader {
         display: flex;
         justify-content: center;
@@ -559,12 +602,6 @@
     content:"";
     display:table;
     clear:both;
-}
-
-
-.column img {
-    position: absolute;
-    left: 50%;
 }
 
 
